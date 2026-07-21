@@ -13,7 +13,7 @@ import AdminRoute from "./components/AdminRoutes";
 import ProtectedRoute from "./components/ProtectedRoutes";
 import { Navigate } from "react-router-dom";
 
-export const ServerUrl = "http://localhost:8000"
+export const ServerUrl = "https://virtuoui-library-project.onrender.com"
 
 function App() {
 
