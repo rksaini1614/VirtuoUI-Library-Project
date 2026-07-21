@@ -100,23 +100,32 @@ function App() {
         </AdminRoute>
       }/>
 
-      <Route path='/generate' element={
-        <ProtectedRoute>
-          <Generate/>
-        </ProtectedRoute>
-      }/>
-
-      <Route path='/my-components' element={
-        <ProtectedRoute>
-          <MyComponents/>
-        </ProtectedRoute>
-      }/>
-
-      <Route path='/pricing' element={
-        <ProtectedRoute>
-          <Pricing/>
-        </ProtectedRoute>
-      }/>
+       <Route
+        path="/generate"
+        element={
+          <ProtectedRoute authChecked={authChecked}>
+            <Generate />
+          </ProtectedRoute>
+        }
+      />
+    
+      <Route
+        path="/my-components"
+        element={
+          <ProtectedRoute authChecked={authChecked}>
+            <MyComponents />
+          </ProtectedRoute>
+        }
+      />
+    
+      <Route
+          path="/pricing"
+          element={
+            <ProtectedRoute authChecked={authChecked}>
+              <Pricing />
+            </ProtectedRoute>
+          }
+        />
 
       <Route path='/' element={<Home/>}/>
       <Route path="*" element={<Navigate to="/" replace />} />
